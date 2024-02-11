@@ -15,9 +15,9 @@ Trusting the correctness of compiled Lean programs requires trust in Lean's comp
 
 + For proofs that are not exported, users are additionally trusting the elements of Lean outside the kernel (the elaborator, parser, etc.).
 
-## An more itemized list
+## A more itemized list
 
-A more itemized description of the trust involved in Lean 4 comes from a post by Mario Carneiro on the Lean Zulip. 
+A more itemized description of the trust involved in Lean 4 comes from a [post by Mario Carneiro](https://leanprover.zulipchat.com/#narrow/stream/113488-general/topic/Lean's.20TCB.20for.20executable.20programs/near/404052056) on the Lean Zulip. 
 
 > In general:
 > 
@@ -47,7 +47,7 @@ The first set of points applies to both proofs and compiled executables, while t
 
 2. You're trusting that the developers of the external checker properly implemented the program.
 
-3. You're trusting the implementing language's compiler or interpreter. If you run multiple external checkers, you can think of them as circles in a venn diagram; you're trusting that the part where the circles intersect is free of soundness issues.
+3. You're trusting the implementing language's compiler or interpreter. If you run multiple external checkers, you can think of them as circles in a Venn diagram; you're trusting that the part where the circles intersect is free of soundness issues.
 
 4. For the Nat and String kernel extensions, you're probably trusting a bignum library and the UTF-8 string type of the implementing language.
 
